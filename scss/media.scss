@@ -1,17 +1,64 @@
-@media (max-width: 1024px) {
-    .main{
-        &__second-banner{
-            img{
-                width: 550px;
-            }
+@media (max-width: 1280px) {
+    .calc__page{
+        &-text{
+            font-size: 18px;
+        }
+
+        &__submit-btn{
+            font-size: 20px;
         }
     }
 }
-
+@media (max-width: 1024px) {
+}
 @media (max-width: 768px) {
-
+    .calc__page{
+        &__first-block{
+            width: 80%;
+        }
+        &__form{
+            align-items: center;
+            select{
+                text-indent: 20px;
+            }
+            label{
+                margin-left: 0;
+            }
+        }
+        &__submit-btn{
+            width: 70%;
+            margin-top: 40px;
+        }
+        &-wrapper{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__second-block{
+            width: 75%;
+        }
+        &-text{
+            font-size: 16px;
+        }
+    }
 }
   
-@media (max-width: 320px) {
-
+@media (max-width: 480px) {
+    .calc__page{
+        padding: 60px 0;
+        &__first-block{
+            width: 100%;
+        }
+        &__second-block{
+            width: 100%;
+        }
+        
+        &__submit-btn{
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        &-text{
+            font-size: 12px;
+        }
+    }
 }
