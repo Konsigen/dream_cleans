@@ -106,65 +106,67 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-    <section class="calc">
-        <div class="container">
-            <div class="calc__wrapper">
-                <div class="calc__first-block">
-                    <form action="#" method="post" class="calc__form">
-                        <label for="select-kind">Вид прибирання</label>
-                        <select id="select-kind" name="kind">
-                            <option value="supportive">Підтримуюче</option>
-                            <option value="general">Генеральне</option>
-                            <option value="construction">Після будівництва</option>
-                        </select>
-                        <label for="select-accomodation">Тип помешкання</label>
-                        <select id="select-accomodation" name="accomodation">
-                            <option value="flat">Квартира</option>
-                            <option value="house">Дім</option>
-                            <option value="office">Офіс</option>
-                            <option value="etc">Інше</option>
-                        </select>
-                        <label for="select-service">Додатково</label>
-                        <select id="select-service" name="service">
-                            <option disabled selected>Обрати послугу</option>
-                            <option value="window">Квартира</option>
-                            <option value="furniture">Дім</option>
-                        </select>
-                        <label for="range-input">Площа прибирання</label>
-                        <div class="range">
-                            <div class="range__content">
-                               <div class="range__slider">
-                                  <div class="range__slider-line" id="range-line"></div>
-                               </div>
-                               
-                               <div class="range__thumb" id="range-thumb">
-                                  <div class="range__value">
-                                     <span class="range__value-number" id="range-number">0</span>
-                                  </div>
-                               </div>
-                               <input type="range" class="range__input" id="range-input" min="0" max="100" value="0" step="1">
+
+        <section class="calc">
+            <div class="container">
+                <div class="calc__wrapper">
+                    <div class="calc__first-block">
+                        <form action="#" method="post" class="calc__form">
+                            <label for="select-kind">Вид прибирання</label>
+                            <select id="select-kind" name="kind">
+                                <option value="supportive">Підтримуюче</option>
+                                <option value="general">Генеральне</option>
+                                <option value="construction">Після будівництва</option>
+                            </select>
+                            <label for="select-accomodation">Тип помешкання</label>
+                            <select id="select-accomodation" name="accomodation">
+                                <option value="flat">Квартира</option>
+                                <option value="house">Дім</option>
+                                <option value="office">Офіс</option>
+                                <option value="etc">Інше</option>
+                            </select>
+                            <label for="select-service">Додатково</label>
+                            <select id="select-service" name="service">
+                                <option disabled selected>Обрати послугу</option>
+                                <option value="window">Квартира</option>
+                                <option value="furniture">Дім</option>
+                            </select>
+                            <label for="range-input">Площа прибирання (км²)</label>
+                            <div class="range">
+                                <div class="range__content">
+                                   <div class="range__slider">
+                                      <div class="range__slider-line" id="range-line"></div>
+                                   </div>
+                                   
+                                   <div class="range__thumb" id="range-thumb">
+                                      <div class="range__value">
+                                         <span class="range__value-number" id="range-number">1</span>
+                                      </div>
+                                   </div>
+                                   <input type="range" class="range__input" id="range-input" min="1" max="100" value="1" step="1">
+                                </div>
                             </div>
+                            <label for="phone"></label>
+                            <input id="phone" name="phone" required placeholder="Ваш номер*"> 
+                            <button id="form_button" class="button_submit">Розрахувати вартість</button>
                         </div>
-                        <label for="phone"></label>
-                        <input id="phone" name="phone" required placeholder="Ваш номер*"> 
-                        <button id="form_button" class="button_submit">Розрахувати вартість</button>
-                    </div>
-                <div class="calc__second-block">
-                    <div class="calc__calcImg">
-                        <img src="img/calculator.png" alt="">
-                    </div>
-                    <div class="calc__messageImg">
-                        <img src="img/message.png" alt="">
-                    </div>
-                    <div class="calc__text">
-                        <span>Ми передзвонимо вам у зручний час та запропонуємо оптимальний вибір послуг, враховуючи ваш бюджет, потреби та терміни. Просто розкажіть нам про свої потреби.</span>
+                    <div class="calc__second-block">
+                        <div class="calc__calcImg">
+                            <img src="img/calculator.png" alt="">
+                        </div>
+                        <div class="calc__messageImg">
+                            <img src="img/message.png" alt="">
+                        </div>
+                        <div class="calc__text">
+                            <span>Ми зателефонуємо вам у зручний час та запропонуємо оптимальний вибір послуг, враховуючи ваш бюджет, потреби та терміни. Просто розкажіть нам про свої потреби.</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    
+    
    <script src="js/script.js"></script>
 </body>
 </html>
