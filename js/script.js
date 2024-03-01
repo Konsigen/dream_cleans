@@ -3,6 +3,8 @@ const rangeThumb = document.getElementById('range-thumb'),
       rangeLine = document.getElementById('range-line'),
       rangeInput = document.getElementById('range-input')
 
+ 
+
 const step = 100 / rangeInput.max 
 
 const rangeInputSlider = () =>{
@@ -22,3 +24,22 @@ const rangeInputSlider = () =>{
 }
 
 rangeInputSlider()
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.header__menu'),
+        menuItem = document.querySelectorAll('.header__link'),
+        hamburger = document.querySelector('.hamburger');
+
+  hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('hamburger_active');
+      menu.classList.toggle('menu_active');
+  });
+
+  menuItem.forEach(item => {
+      item.addEventListener('click', () => {
+          hamburger.classList.remove('hamburger_active');
+          menu.classList.remove('menu_active'); 
+      });
+  });
+});
+
