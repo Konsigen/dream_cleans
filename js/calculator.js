@@ -23,11 +23,13 @@ const prices = {
     'postRenovation': [
         [72, 94], [68, 89]
     ],
+    'window': [
+        [75, 75], [75, 75]
+    ],
     "dryCleaning": dryCleaningPrice
 }
 
 calculatorForm.addEventListener('submit', (e) => {
-    console.log(e)
     e.preventDefault()
     let generalPrice = 0;
     const cleanAreaValue = parseInt(cleanArea.textContent)
@@ -35,14 +37,15 @@ calculatorForm.addEventListener('submit', (e) => {
     const isWindowsCleaning = cleanExtra.value === 'window' ? 1 : 0;
     const isMoreThan100 = cleanAreaValue === 100 ? 1 : 0;
 
-    const priceByMeter = prices[cleanKind.value][isMoreThan100][isWindowsCleaning]
+    console.log(isMoreThan100 + '=')
+
+    const priceByMeter = prices[cleanKind.value][0][0]
     
     generalPrice +=  cleanExtra.value === 'furniture' ? dryCleaningPrice : 0;
     generalPrice += priceByMeter * cleanAreaValue
 
     popup.style.display = 'block';
     document.body.style.overflow = 'hidden';
-    document.body.style.userSelect = 'none';
 
     popupPriceField.textContent = generalPrice + ' грн';
     popupPricePerMeterField.textContent = parseInt(generalPrice / cleanAreaValue) + ' грн / м²';
@@ -60,14 +63,33 @@ cleanKind.addEventListener('change', (e) => {
     }
 })
 
-
-
-
 popupExit.addEventListener('click', (e) => {
     e.preventDefault()
 
     popup.style.display = 'none';
     document.body.style.overflow = 'visible'
-    document.body.style.userSelect = 'all'
 
+})
+
+
+const popupFormBlock = document.getElementById('popup__form')
+const popupForm = document.getElementById('popup__form')
+const popupCloseForm = document.getElementById('popup-close-form')
+
+function showPopupForm() {
+    popupFormBlock.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+popupCloseForm.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    popupFormBlock.style.display = 'none';
+    document.body.style.overflow = 'visible'
+
+})
+
+popupForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    
 })

@@ -1,4 +1,4 @@
-@media(max-width:1800px){
+@media (max-width: 1800px) {
     .header{
         &__name{
             font-size: 30px;
@@ -39,11 +39,14 @@
         }
         &-links{
             gap: 50px;
+            justify-content: start;
         }
         &-interactive{
-            button{
+            justify-content: start;
+            gap: 40px;
+            a{
                 padding: 20px 20px;
-                font-size: 19px;
+                font-size: 18px;
             }
         }
         &-banner{
@@ -70,8 +73,14 @@
             margin: 0 auto;
         }
     }
+    .container {
+        max-width: 90%;
+    }
+
 }
-@media (max-width: 1280px){
+    
+    
+@media (max-width: 1280px) {
     .header{
         padding: 20px 0;
         &__name{
@@ -84,6 +93,7 @@
             font-size: 16px;
         }
     }
+    
     .calc__page{
         &-text{
             font-size: 18px;
@@ -91,6 +101,7 @@
 
         &__submit-btn{
             font-size: 20px;
+            width: 100%;
         }
         
     }
@@ -113,25 +124,13 @@
             }
         }
         &-interactive{
-            button{
-                padding: 15px 15px;
-                font-size: 13px;
+            a{
+                padding: 15px 20px;
+                font-size: 14px;
                 
             }
         }
-        &-social{
-            gap: 15px;
-            &-item{
-                padding: 5px;
-                a{
-                    img{
-                        width: 25px;
-                        height: 25px;
-                    }
-                }
-                
-            }
-        }
+        
         &-banner{
             >img{
                 width: 430px;
@@ -182,9 +181,8 @@
                 padding: 10px 40px;
             }
         }
-    }
-}
-@media ( max-width: 1024px){
+    }}
+@media (max-width: 1024px) {
     .header{
         padding: 20px 0;
         &__name{
@@ -229,7 +227,7 @@
         }
         &-interactive{
             margin-top: 30px;
-            button{
+            a{
                 padding: 10px 5px;
                 font-size: 14px;
             }
@@ -257,9 +255,8 @@
             row-gap: 15px;
 
         }
-    }
-}
-@media (max-width: 768px){
+    }}
+@media (max-width: 768px)  {
     .header__menu {
         position: fixed;
         display: flex; 
@@ -369,7 +366,7 @@
         &-interactive{
             flex-direction: column;
             gap: 20px;
-            button{
+            a{
                 font-size: 24px;
                 padding: 18px 35px;
             }
@@ -387,21 +384,11 @@
         &-items{
             display: none;
         }
-        &-info-sm{
-            border-radius: 35px;
-        }
         &-info-item{
             font-size: 18px;
         }
         &-social-item{
             margin-top: 20px;
-            padding: 15px;
-            a{
-                img{
-                    width: 30px;
-                    height: 30px;
-                }
-            }
         }
         &-social{
             display: none;
@@ -509,12 +496,12 @@
                 padding: 10px 20px;
             }
         }
-    }
-}
-@media (max-width: 480px){
+    }}
+@media (max-width: 480px)  {
     .hamburger{
         right: 10px;
     }
+    
     .header{
         &__phone{
             font-size: 15px;
@@ -571,7 +558,7 @@
             }
         }
         &-interactive{
-            button{
+            a{
                 font-size: 16px;
                 padding: 12px 20px;
             }
@@ -675,5 +662,4 @@
                 font-size: 14px;
             }
         }
-    }
-}
+    }}

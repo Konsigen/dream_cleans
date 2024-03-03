@@ -50,7 +50,7 @@
                         </div>
                     </header>
                     <div class="divider"></div>
-                    <section class="title__page ">
+                    <section class="title__page">
                         <div class="title__page-first">
                             <div class="title__page-header">
                                 <h2>
@@ -67,8 +67,8 @@
                                 </span>
                             </div>
                             <div class="title__page-interactive">
-                                <button class="title__page-clearingBtn">Замовити прибирання</button>
-                                <button class="title__page-costBtn">Розрахувати вартість</button>
+                                <a class="title__page-clearingBtn" onclick="showPopupForm()">Замовити прибирання</a>
+                                <a href="#calc__page" class="title__page-costBtn">Розрахувати вартість</a>
                             </div>
                             <div class="title__page-links">
                                 <div class="title__page-social">
@@ -165,7 +165,7 @@
                     </section>
                 </div>
             </div>
-            <section class="calc__page">
+            <section class="calc__page" id="calc__page">
                 <div class="container">
                     <div class="calc__page-wrapper">
                         <div class="calc__page__first-block">
@@ -186,7 +186,7 @@
                                 </select>
                                 <label for="select-service">Додатково</label>
                                 <select id="select-service" name="service">
-                                    <option disabled selected>Обрати послугу</option>
+                                    <option selected>-----</option>
                                     <option value="window" id="window_option">Миття вікон</option>
                                     <option value="furniture">Хімчистка м’яких меблів</option>
                                 </select>
@@ -210,7 +210,8 @@
                                 <label for="phone"></label>
                                 <input id="phone" name="phone" required placeholder="Ваш номер*"> 
                                 <button for="calc__page" id="form_button" class="calc__page__submit-btn">Розрахувати вартість</button>
-                            </div>
+                            </form>
+                        </div>
                         <div class="calc__page__second-block">
                             <div class="calc__page-calcImg">
                                 <img src="img/calculator.png" alt="">
@@ -225,35 +226,7 @@
                     </div>
                 </div>
             </section>
-            <section class="calc__popup" id="calcPopup">
-                <div class="popup">
-                    <div class="popup-close" id="popupClose"><img src="img/icons/exit.png" alt=""></div>
-                    <div class="popup-content">
-                        <div class="popup-icon"><img src="img/icons/black-logo.svg" alt=""></div>
-                        <div class="popup-name">Dream Cleans</div>
-                        <div class="popup-text">Орієнтовна ціна клінінгу</div>
-                        <div class="popup-price" id="popupPrice"></div>
-                        <div class="popup-calculation" id="popupPricePerMeter"></div>
-                        <div class="popup-contactus">
-                            <div class="popup-contactus-phone">
-                                <div class="popup-contactus-phone-text"><a href="tel:+380683211232">0683211232</a></div>
-                                <div class="popup-contactus-phone-image">
-                                    <img src="img/icons/small-phone.png" alt="">
-                                </div>
-                            </div>
-                            <div class="popup-contactus-text">звяжіться з нами прямо зараз</div>
-                        </div>
-                        <div class="popup-links title__page-social">
-                            <div class="popup-link title__page-social-item"><a href="#"><img src="img/icons/instagram.png" alt="#"></a></div>
-                            <div class="popup-link title__page-social-item"><a href="#"><img src="img/icons/viber.png" alt="#"></a></div>
-                            <div class="popup-link title__page-social-item"><a href="#"><img src="img/icons/facebook.png" alt="#"></a></div>
-                            <div class="popup-link title__page-social-item"><a href="#"><img src="img/icons/whatsapp.png" alt="#"></a></div>
-                            <div class="popup-link title__page-social-item"><a href="#"><img src="img/icons/telegram.png" alt="#"></a></div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+            
             <section class="advantages container">
                 <h2 class="advantages__title"><span>10</span> ФАКТІВ ПРО НАШУ <br> КОМППАНІЮ</h2>
                 <div class="advantages__items">
@@ -330,44 +303,89 @@
                             <div class="price__page-item">
                                 <div class="price__page-item-title">від 55грн/м²</div>
                                 <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn">ЗАМОВИТИ</button>
+                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
                             </div>
                             <div class="price__page-item">
                                 <div class="price__page-item-title">від 55грн/м²</div>
                                 <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn">ЗАМОВИТИ</button>
+                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
                             </div>
                             <div class="price__page-item">
                                 <div class="price__page-item-title">від 55грн/м²</div>
                                 <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn">ЗАМОВИТИ</button>
+                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
                             </div>
                             <div class="price__page-item">
                                 <div class="price__page-item-title">від 55грн/м²</div>
                                 <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn">ЗАМОВИТИ</button>
+                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
                             </div>
                             <div class="price__page-item">
                                 <div class="price__page-item-title">від 55грн/м²</div>
                                 <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn">ЗАМОВИТИ</button>
+                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
                             </div>
                             <div class="price__page-item">
                                 <div class="price__page-item-title">від 55грн/м²</div>
                                 <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn">ЗАМОВИТИ</button>
+                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="reviews">
-                <div class="container2">
+                <div class="container">
                     <div class="advantages__title reviews__title">НАШІ ВІДГУКИ</div>
                     <script src="https://widget.trustmary.com/PPi2GzQSj"></script>
                 </div>
             </section>
         </main>
+        <div class="calc__popup" id="calcPopup">
+            <div class="popup">
+                <div class="popup-close" id="popupClose"><img src="img/icons/exit.png" alt=""></div>
+                <div class="popup-content">
+                    <div class="popup-icon"><img src="img/icons/black-logo.svg" alt=""></div>
+                    <div class="popup-name">Dream Cleans</div>
+                    <div class="popup-text">Орієнтовна ціна клінінгу</div>
+                    <div class="popup-price" id="popupPrice"></div>
+                    <div class="popup-calculation" id="popupPricePerMeter"></div>
+                    <div class="popup-contactus">
+                        <div class="popup-contactus-phone">
+                            <div class="popup-contactus-phone-text"><a href="tel:+380683211232">0683211232</a></div>
+                            <div class="popup-contactus-phone-image">
+                                <img src="img/icons/small-phone.png" alt="">
+                            </div>
+                        </div>
+                        <div class="popup-contactus-text">звяжіться з нами прямо зараз</div>
+                    </div>
+                    <div class="popup-links">
+                        <div class="popup-link"><a href="#"><img src="img/icons/instagram.png" alt="#"></a></div>
+                        <div class="popup-link"><a href="#"><img src="img/icons/viber.png" alt="#"></a></div>
+                        <div class="popup-link"><a href="#"><img src="img/icons/facebook.png" alt="#"></a></div>
+                        <div class="popup-link"><a href="#"><img src="img/icons/whatsapp.png" alt="#"></a></div>
+                        <div class="popup-link"><a href="#"><img src="img/icons/telegram.png" alt="#"></a></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="popup__form" id="popup__form">
+            <div class="popup__form-container">
+                <div class="popup__form-close" id="popup-close-form"><img src="img/icons/exit.png" alt=""></div>
+                <div class="popup__form-content">
+                    <div class="popup__form-content-title">ЗАМОВИТИ ПРИБИРАННЯ</div>
+                    <div class="popup__form-content-subtitle">Ми перетелефонуємо Вам протягом 10 хвилин для уточнення деталей</div>
+                    <form class="popup__form-content-form" id="popup-content-form">
+                        <input type="text" placeholder="Ваше ім'я">
+                        <input type="tel" placeholder="Ваш телефон">
+                        <input type="submit" value="ЗАМОВИТИ ПОСЛУГУ">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer"></footer>
     </div>
     
     <script src="js/script.js"></script>
