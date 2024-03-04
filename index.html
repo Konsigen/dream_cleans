@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/media.min.css">
 
 </head>
@@ -19,8 +20,8 @@
             <div class="main__page">
                 <div class="container">
                     <header class="header">
-                        <div class="header__first">
-                            <div class="header__logo"><a href="#"><img src="img/icons/main__icon.svg" alt="#"></a></div>
+                        <div class="header__first animate__animated animate__fadeInLeft wow">
+                            <div class="header__logo "><a href="#"><img src="img/icons/main__icon.svg" alt="#"></a></div>
                             <div class="header__names">
                                 <div class="header__name">DREAM CLEANS</div>
                                 <div class="header__phone-wrapper">
@@ -30,7 +31,7 @@
             
                             </div>
                         </div>
-                        <nav class="header__menu">
+                        <nav class="header__menu animate__animated animate__fadeInDown wow">
                             <a href="#" class="header__link">
                                 <li class="header__item">Послуги</li>     
                             </a>           
@@ -52,7 +53,7 @@
                     <div class="divider"></div>
                     <section class="title__page">
                         <div class="title__page-first">
-                            <div class="title__page-header">
+                            <div class="title__page-header animate__animated animate__fadeInLeft wow">
                                 <h2>
                                     ЯКІСНЕ ПРИБИРАННЯ 
                                     <span>комерційної нерухомості</span>
@@ -60,17 +61,17 @@
                                     квартир і будинків
                                 </h2>
                             </div>
-                            <div class="title__page-location">
+                            <div class="title__page-location animate__animated animate__fadeInLeft animate__delay-1s wow">
                                 <img src="img/icons/location.svg" alt="location">
                                 <span>
                                     В Києві та в Київській області
                                 </span>
                             </div>
-                            <div class="title__page-interactive">
+                            <div class="title__page-interactive animate__animated animate__fadeInLeft animate__delay-2s wow">
                                 <a class="title__page-clearingBtn" onclick="showPopupForm()">Замовити прибирання</a>
                                 <a href="#calc__page" class="title__page-costBtn">Розрахувати вартість</a>
                             </div>
-                            <div class="title__page-links">
+                            <div class="title__page-links animate__animated animate__fadeInLeft animate__delay-3s wow">
                                 <div class="title__page-social">
                                     <div class="title__page-social-item"><a href="#"><img src="img/icons/instagram.png" alt="#"></a></div>
                                     <div class="title__page-social-item"><a href="#"><img src="img/icons/viber.png" alt="#"></a></div>
@@ -153,6 +154,10 @@
                                         </span>
                                     </div>
                                 </div>
+                                <div class="title__page-interactive-sm">
+                                    <a class="title__page-clearingBtn" onclick="showPopupForm()">Замовити прибирання</a>
+                                    <a href="#calc__page" class="title__page-costBtn">Розрахувати вартість</a>
+                                </div>
                             </div>
                             <div class="title__page-social title__page-social-sm">
                                 <div class="title__page-social-item"><a href="#"><img src="img/icons/instagram.png" alt="#"></a></div>
@@ -165,7 +170,54 @@
                     </section>
                 </div>
             </div>
-            <section class="calc__page" id="calc__page">
+            <section class="price__page container">
+                <div class="price__page-wrapper">
+                    <div class="price__page-header">
+                        <h2>ПОСЛУГИ <span>ТА</span> ЦІНИ</h2>
+                        <p>Професійний підхід до прибирання, із застосуванням новітніх засобів та технологій, тільки кваліфікований персонал, здійснюємо постійний контроль за якістю послуг з прибирання в Києві та області – ми готові зробити все, щоб ви отримали якісні послуги, та комфортні умови з прибирання. Ми гарантуємо Вам чудову чистоту.</p>
+                    </div>
+                    <div class="price__page-subheader">
+                        <div class="price__page-subheader-wrapper">
+                            <span>Ми розраховуємо на тривалі відносини з нашими улюбленими клієнтами, і тому ви завжди можете бути впевнені у високому рівні якості та сервісу з нашого боку.</span>
+                            <span>Клінінгова компанія «DREAM CLEANS» у Києві — переваги комфортного прибирання квартири, вдома, або офісу!</span>
+                        </div>
+                        <div class="price__page-img"><img src="img/icons/price__icon.png" alt=""></div>
+                    </div>
+                    <div class="price__page-items">
+                        <div class="price__page-item animate__animated animate__jackInTheBox wow">
+                            <div class="price__page-item-title">від 57грн/м²</div>
+                            <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ РЕМОНТУ</div>
+                            <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                        </div>
+                        <div class="price__page-item animate__animated animate__jackInTheBox animate__delay-1s wow">
+                            <div class="price__page-item-title">від 60грн/м²</div>
+                            <div class="price__page-item-subtitle">ГЕНЕРАЛЬНЕ ПРИБИРАННЯ</div>
+                            <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                        </div>
+                        <div class="price__page-item animate__animated animate__jackInTheBox animate__delay-2s wow">
+                            <div class="price__page-item-title">від 55грн/м²</div>
+                            <div class="price__page-item-subtitle">МИТТЯ ВІКОН ТА ВІТРИН</div>
+                            <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                        </div>
+                        <div class="price__page-item animate__animated animate__jackInTheBox wow">
+                            <div class="price__page-item-title">від 25грн/м²</div>
+                            <div class="price__page-item-subtitle">ПІДТРИМУЮЧЕ ПРИБИРАННЯ</div>
+                            <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                        </div>
+                        <div class="price__page-item animate__animated animate__jackInTheBox animate__delay-1s wow">
+                            <div class="price__page-item-title">850грн</div>
+                            <div class="price__page-item-subtitle">ХІМЧИСТКА МЕБЛІВ ТА КОВРОЛІНУ</div>
+                            <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                        </div>
+                        <div class="price__page-item animate__animated animate__jackInTheBox animate__delay-2s wow">
+                            <div class="price__page-item-title">від 650грн</div>
+                            <div class="price__page-item-subtitle">ОЗОНУВАННЯ</div>
+                            <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="calc__page " id="calc__page">
                 <div class="container">
                     <div class="calc__page-wrapper">
                         <div class="calc__page__first-block">
@@ -212,8 +264,8 @@
                                 <button for="calc__page" id="form_button" class="calc__page__submit-btn">Розрахувати вартість</button>
                             </form>
                         </div>
-                        <div class="calc__page__second-block">
-                            <div class="calc__page-calcImg">
+                        <div class="calc__page__second-block animate__animated animate__lightSpeedInRight wow">
+                            <div class="calc__page-calcImg ">
                                 <img src="img/calculator.png" alt="">
                             </div>
                             <div class="calc__page-messageImg">
@@ -226,119 +278,93 @@
                     </div>
                 </div>
             </section>
-            
-            <section class="advantages container">
-                <h2 class="advantages__title"><span>10</span> ФАКТІВ ПРО НАШУ <br> КОМППАНІЮ</h2>
+            <section class="advantages__page container">
+                <h2 class="advantages__title animate__animated animate__fadeInLeft wow"><span>10</span> ФАКТІВ ПРО НАШУ <br> КОМППАНІЮ</h2>
                 <div class="advantages__items">
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInDown wow">
                         <div class="advantages__item-title">НАШ ДОСВІД </div>
                         <div class="advantages__item-subtitle">
                             Більше 2-х тисяч 
                             прибраних приміщень.
                         </div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInDown animate__delay-1s wow">
                         <div class="advantages__item-title">НАША КОМАНДА</div>
                         <div class="advantages__item-subtitle">
                             Професійно навчена команда,
                             яка працює на результат
                         </div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInDown animate__delay-2s wow">
                         <div class="advantages__item-title">ГАРАНТІЯ ЯКОСТІ</div>
                         <div class="advantages__item-subtitle">
                             Якщо знадобиться,
                             ми одразу виправимо недоліки
                         </div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInDown animate__delay-3s wow">
                         <div class="advantages__item-title">ДОСТУПНІСТЬ</div>
                         <div class="advantages__item-subtitle">Виїзд за Київ + 100 км</div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInDown animate__delay-4s wow">
                         <div class="advantages__item-title">ІНДИВІДУАЛЬНИЙ ПІДХІД</div>
                         <div class="advantages__item-subtitle">Враховуємо індивідуальні потреби клієнта</div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInUp wow">
                         <div class="advantages__item-title">ЗНИЖКИ</div>
                         <div class="advantages__item-subtitle">Знижки постійним клієнтам до 30%</div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInUp animate__delay-1s wow">
                         <div class="advantages__item-title">ПРОЗОРІ ЦІНИ</div>
                         <div class="advantages__item-subtitle">Чіткі та прозорі ціни без прихованих витрат</div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInUp animate__delay-2s wow">
                         <div class="advantages__item-title">ПРОФЕСІЙНІ МИЮЧІ ЗАСОБИ</div>
                         <div class="advantages__item-subtitle">
                             Більше 2-х тисяч 
                             прибраних приміщень.
                         </div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInUp animate__delay-3s wow">
                         <div class="advantages__item-title">ЗАВЖДИ НА ЗВʼЯЗКУ</div>
                         <div class="advantages__item-subtitle">Завжди готові слухати ваші побажання, відгуки та відповідати на будь-які питання.</div>
                     </div>
-                    <div class="advantages__item">
+                    <div class="advantages__item animate__animated animate__fadeInUp animate__delay-4s wow">
                         <div class="advantages__item-title">СПІВПРАЦЯ</div>
                         <div class="advantages__item-subtitle">На постійній основі,
                             офіси, центри, та інше</div>
                     </div>
                 </div>
             </section>
-            <section class="price__page">
+            <section class="consist__page">
                 <div class="container">
-                    <div class="price__page-wrapper">
-                        <div class="price__page-header">
-                            <h2>ПОСЛУГИ <span>ТА</span> ЦІНИ</h2>
-                            <p>Професійний підхід до прибирання, із застосуванням новітніх засобів та технологій, тільки кваліфікований персонал, здійснюємо постійний контроль за якістю послуг з прибирання в Києві та області – ми готові зробити все, щоб ви отримали якісні послуги, та комфортні умови з прибирання. Ми гарантуємо Вам чудову чистоту.</p>
+                    <div class="consist__page__wrapper">
+                        <div class="consist__page-first animate__animated animate__backInDown wow">
+                            <div class="consist__page-info">
+                                <div class="consist__page-info-title">ЩО ВХОДИТЬ В</div>
+                                <span>ГЕНЕРАЛЬНИЙ КЛІНІНГ?</span>
+                                <p>Нас не викликають, щоб просто протерти підлогу, ми робимо повноцінне якісне прибирання, яка триває 5 - 6 годин, щоб вичистити все до блиску!</p>
+                                <button class="consist__page-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                            </div>
+                            <div class="consist__page-first-img"><img src="img/general__clinning.png" alt=""></div>
                         </div>
-                        <div class="price__page-subheader">
-                            <div class="price__page-subheader-wrapper">
-                                <span>Ми розраховуємо на тривалі відносини з нашими улюбленими клієнтами, і тому ви завжди можете бути впевнені у високому рівні якості та сервісу з нашого боку.</span>
-                                <span>Клінінгова компанія «DREAM CLEANS» у Києві — переваги комфортного прибирання квартири, вдома, або офісу!</span>
-                            </div>
-                            <div class="price__page-img"><img src="img/icons/price__icon.png" alt=""></div>
-                        </div>
-                        <div class="price__page-items">
-                            <div class="price__page-item">
-                                <div class="price__page-item-title">від 55грн/м²</div>
-                                <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
-                            </div>
-                            <div class="price__page-item">
-                                <div class="price__page-item-title">від 55грн/м²</div>
-                                <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
-                            </div>
-                            <div class="price__page-item">
-                                <div class="price__page-item-title">від 55грн/м²</div>
-                                <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
-                            </div>
-                            <div class="price__page-item">
-                                <div class="price__page-item-title">від 55грн/м²</div>
-                                <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
-                            </div>
-                            <div class="price__page-item">
-                                <div class="price__page-item-title">від 55грн/м²</div>
-                                <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
-                            </div>
-                            <div class="price__page-item">
-                                <div class="price__page-item-title">від 55грн/м²</div>
-                                <div class="price__page-item-subtitle">ПРИБИРАННЯ ПІСЛЯ БУДІВНИЦТВА</div>
-                                <button class="price__page-item-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
+                        <div class="consist__page-second animate__animated animate__backInUp animate__delay-1s wow">
+                            <div class="consist__page-second-img"><img src="img/after__reparation.png" alt=""></div>
+                            <div class="consist__page-info">
+                                <div class="consist__page-info-title">ЩО ВХОДИТЬ В</div>
+                                <span >ПІСЛЯ РЕМОНТУ</span>
+                                <p>Ми повністю готуємо приміщення до заїзду: знепилюємо всі поверхні і очищаємо їх від слідів і крапель фарби, виносимо сміття, дезінфікуємо сантехніку.</p>
+                                <button class="consist__page-btn" onclick="showPopupForm()">ЗАМОВИТИ</button>
                             </div>
                         </div>
                     </div>
+                    <button class="consist__page-btn consist__page-btn-sm" onclick="showPopupForm()">ЗАМОВИТИ</button>
                 </div>
             </section>
-            <section class="reviews">
-                <div class="container">
+            <section class="reviews__page container">
                     <div class="advantages__title reviews__title">НАШІ ВІДГУКИ</div>
-                    <script src="https://widget.trustmary.com/PPi2GzQSj"></script>
-                </div>
+                    <div class="reviews__page__header">
+                    </div>
             </section>
         </main>
         <div class="calc__popup" id="calcPopup">
@@ -384,11 +410,48 @@
                 </div>
             </div>
         </div>
-
-        <footer class="footer"></footer>
     </div>
+    <footer class="footer">
+        <div class="container">
+            
+            <div class="footer__content">
+                <div class="footer-map">
+                    <div class="footer-header">Зона обслуговування </div>
+                    <div class="animate__animated animate__flipInX"><img src="img/map.png" alt=""></div>
+                </div>
+                <div class="footer__right">
+                    <div class="footer-img animate__animated animate__headShake animate__infinite wow"><img src="img/smart-phone.png" alt=""></div>
+                    <div class="footer__wrapper">
+                        <div class="footer-followus">
+                            <div class="footer-title">Слідкуйте за нами</div>
+                            <div class="footer-followus-items">
+                                <div class="footer-item"><a href="#"><img src="img/footer-icon/instagram-ft.svg" alt=""></a></div>
+                                <div class="footer-item"><a href="#"><img src="img/footer-icon/facebook-ft.svg" alt=""></a></div>
+                                <div class="footer-item"><a href="#"><img src="img/footer-icon/tik-tok-ft.svg" alt=""></a></div>
+                            </div>
+                        </div>
+                        <div class="footer-connectus">
+                            <div class="footer-title">Зв'яжіться з нами</div>
+                            <div class="footer-connectus-items">
+                                <div class="footer-item"><a href="#"><img src="img/footer-icon/viber-ft.svg" alt=""></a></div>
+                                <div class="footer-item"><a href="#"><img src="img/footer-icon/telegram-ft.svg" alt=""></a></div>
+                                <div class="footer-item"><a href="#"><img src="img/footer-icon/whatsapp-ft.svg" alt=""></a></div>
+                            </div>
+                        </div>
+                        <div class="footer-phone">
+                            <div class="footer-phone-number"><a href="tel:+380683211232">0683211232</a></div>
+                            <div class="footer-item footer-item-phone"><img src="img/footer-icon/phone-ft.svg" alt=""></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
     
     <script src="js/script.js"></script>
     <script src="js/calculator.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
