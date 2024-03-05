@@ -1095,3 +1095,30 @@ body {
         }
     }
 }
+.anchor {
+    width: 130px;
+    height: 130px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    text-align: center;
+    color: white;
+    animation: rotate 4s linear infinite; 
+    &:hover{
+        background-color: darken($color: #3498db, $amount:30%);
+    }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
