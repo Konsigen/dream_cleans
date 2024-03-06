@@ -39,9 +39,9 @@ calculatorForm.addEventListener('submit', (e) => {
 
     console.log(isMoreThan100 + '=')
 
-    const priceByMeter = prices[cleanKind.value][0][0]
-    
-    generalPrice +=  cleanExtra.value === 'furniture' ? dryCleaningPrice : 0;
+    const priceByMeter = prices[cleanKind.value][isWindowsCleaning][isMoreThan100]
+    console.log(priceByMeter)
+    generalPrice += cleanExtra.value === 'furniture' ? dryCleaningPrice : 0;
     generalPrice += priceByMeter * cleanAreaValue
 
     popup.style.display = 'block';

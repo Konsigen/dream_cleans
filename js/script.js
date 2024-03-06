@@ -47,5 +47,5 @@ window.onload = function(){
 
     setTimeout(function(){
         preloader.style.display = "none";
-    }, 2000);
+    }, 10);
 }
