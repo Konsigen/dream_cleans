@@ -63,7 +63,7 @@
             }
         }
     }
-    .advantages{
+    .advantages__page{
         &__items{
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         }
@@ -105,7 +105,7 @@
         }
         
     }
-    .advantages{
+    .advantages__page{
         &__items{
             
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -270,6 +270,27 @@
             font-size: 14px;
         }
     }
+    .reviews__page{
+        &__body{
+            justify-content: center;
+        }
+        &__body-item{
+            &-text{
+                text-align: center;
+            }
+            &-stars{
+                margin: 0 auto;
+            }
+        }
+    }
+    .calc__page__second-block{
+        animation: none;
+    }
+    .price__page{
+        &-item{
+            animation: none;
+        }
+    }
     .title__page{
         margin-top: 30px;
         &-header{
@@ -383,6 +404,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+            animation: none;
             &-img{
                 width: 80%;
             }
@@ -400,10 +422,17 @@
             flex-direction: column-reverse;
             width: 100%;
             margin-top: 30px;
+            animation: none;
             &-img{
                 width: 80%;
             }
         }
+    }
+    .advantages__page__item{
+        animation: none;
+    }
+    .advantages__page__title{
+        animation: none;
     }
     .footer{
         padding: 30px 10px 30px 10px;
@@ -457,7 +486,35 @@
         margin: 10px 0;
     }
     
-    
+    .reviews__page{
+        margin-top: 30px;
+        &-title{
+            line-height: 100%;
+            font-size: 35px;
+        }
+        &__header{
+            padding: 10px 10px;
+            &__right-btn{
+                button{
+                    padding: 5px;
+                    font-size: 14px;
+                }
+            }
+            &__rating{
+                &-amount{
+                    font-size: 16px;
+                }
+                &-stars{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+    }
     .hamburger {
         display: block;
         position: fixed;
@@ -623,7 +680,7 @@
         }
 
     }
-    .advantages{
+    .advantages__page{
         &__items{
             grid-template-columns: repeat(auto-fit,100%);
             gap: 20px;
@@ -632,6 +689,12 @@
         }
         &__item{
             width: 100%;
+        }
+        &__title{
+            font-size: 30px;
+            span{
+                font-size: 55px;
+            }
         }
     }
     .price__page{
@@ -880,7 +943,8 @@
             font-size: 12px;
         }
     }
-    .advantages{
+    .advantages__page{
+        margin-top: 40px;
         margin-bottom: 50px;
         &__title{
             text-align: center;
@@ -903,13 +967,39 @@
             }
         }
     }
-    .reviews{
-        .container2 {
+    .reviews__page{
+        .container{
             max-width: 95%;
         }
-        .reviews__title{
-            padding-left: 0;
-            padding-top: 30px;
+        &-title{
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        &__body{
+            margin: 25px 0 0 0;
+        }
+        &__header{
+            &__right-btn{
+                button{
+                    padding: 5px;
+                    font-size: 14px;
+                }
+            }
+            &__rating{
+                justify-content: center;
+                &-amount{
+                    display: none;
+                }
+                &-stars{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
         }
     }
     .price__page{

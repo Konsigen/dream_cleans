@@ -768,15 +768,12 @@ body {
 .advantages__page {
     background-color: #d9d9d9;
     margin-top: 100px;
-    &__title {
-        
-    }
     &__items {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-row-gap: 3em;
     }
-    &__item {
+    &__item{
         width: 300px;
         min-height: 160px;
         background-color: #2f7d9f;
@@ -1000,10 +997,7 @@ body {
 .reviews__page {
     font-family: 'Inter';
     margin-top: 100px;
-    &.container {
-        max-width: 75%;
-    }
-    .reviews__title {
+    &-title {
         font-family: 'Ruberoid';
 
     }
@@ -1016,8 +1010,6 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &__left {
-        }
         &__logo {
             display: flex;
             align-items: center;
@@ -1078,7 +1070,6 @@ body {
             background-color: #1a79a3;
             border-radius: 12px;
             padding: 20px 25px;
-
             display: grid;
             row-gap: 15px;
             color: #fff;
