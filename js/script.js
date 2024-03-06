@@ -42,3 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+window.onload = function(){
+    const preloader = document.querySelector(".preloader");
+
+    setTimeout(function(){
+        preloader.style.display = "none";
+    }, 2000);
+}
