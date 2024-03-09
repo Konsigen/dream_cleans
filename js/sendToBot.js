@@ -36,7 +36,8 @@ form1.addEventListener('submit', (event) => {
         } else if (response.status == 200) {
             console.log('Дані успішно надіслано на Telegram бота');
         }
-        return location.reload()
+        popupForm.style.display = 'none';
+        thanksPopup.style.display = 'block';
     })
     .catch((error) => {
         console.error('Помилка при надсиланні даних:', error);

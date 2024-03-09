@@ -6,27 +6,29 @@ const menu = document.querySelector('.header__menu');
 const menuItem = document.querySelectorAll('.header__link');
 const hamburger = document.querySelector('.hamburger');
 const preloader = document.querySelector(".preloader");
-const step = 100 / rangeInput.max 
+
+const step = 100 / rangeInput.max;
 
 
-const rangeInputSlider = () =>{
-   rangeNumber.textContent = rangeInput.value;
-   if (rangeNumber.textContent === rangeInput.max) rangeNumber.textContent += '+'
- 
-   const thumbPosition = rangeInput.value !== rangeInput.min ? (rangeInput.value / rangeInput.max) : 0;
-   
-   const space = rangeInput.offsetWidth - rangeThumb.offsetWidth;
-   
-   rangeThumb.style.left = (thumbPosition * space) + 'px'
-   rangeLine.style.width = rangeInput.value * step + '%'
+const rangeInputSlider = () => {
+    rangeNumber.textContent = rangeInput.value;
+    if (rangeNumber.textContent === rangeInput.max) rangeNumber.textContent += '+';
 
-}
+    const thumbPosition = rangeInput.value !== rangeInput.min ? (rangeInput.value / rangeInput.max) : 0;
 
-rangeInputSlider()
-rangeInput.addEventListener('input', rangeInputSlider)
+    const space = rangeInput.offsetWidth - rangeThumb.offsetWidth;
+
+    rangeThumb.style.left = (thumbPosition * space) + 'px';
+    rangeLine.style.width = rangeInput.value * step + '%';
+};
+
+rangeInputSlider();
+rangeInput.addEventListener('input', rangeInputSlider);
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    setTimeout(function(){
+        preloader.style.display = "none";
+    }, 100);
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
@@ -38,35 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.remove('hamburger_active');
             menu.classList.remove('menu_active'); 
         });
-    });
-
-    setTimeout(function(){
-        preloader.style.display = "none";
-    }, 100);
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    var items = document.querySelectorAll('.reviews__page__body-item-text');
-
-    items.forEach(function(item) {
-        // Визначаємо висоту контейнера
-        var containerHeight = parseInt(window.getComputedStyle(item).maxHeight);
-
-        // Визначаємо висоту текстового контенту
-        var contentHeight = item.scrollHeight;
-
-        // Перевіряємо, чи текст перевищує висоту контейнера
-        if (contentHeight > containerHeight) {
-            // Додаємо стилі для обрізання тексту і додаємо ellipsis
-            item.style.overflow = 'hidden';
-            item.style.textOverflow = 'ellipsis';
-
-            // Додаємо обробник кліку
-            item.addEventListener('click', function() {
-                // При кліку змінюємо стилі для відображення повного тексту
-                item.style.overflow = 'visible';
-                item.style.textOverflow = 'unset';
-            });
-        }
     });
 });

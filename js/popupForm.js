@@ -1,6 +1,8 @@
 const popupForm = document.getElementById('popup__form');
+const thanksPopup = document.getElementById('thanks__popup');
 const popupClose1 = document.getElementById('popupClose1');
 const popupClose2 = document.getElementById('popupClose2');
+const popupClose3 = document.getElementById('popupClose3');
 
 
 // CALCULATOR POPUP
@@ -25,3 +27,10 @@ function showPopupForm() {
     popupFormBlock.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
+
+// THANKS POPUP
+popupClose3.addEventListener('click', (e) => {
+    e.preventDefault();
+    thanksPopup.style.display = 'none';
+    document.body.style.overflow = 'visible';
+});
