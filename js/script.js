@@ -28,7 +28,7 @@ rangeInput.addEventListener('input', rangeInputSlider);
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(function(){
         preloader.style.display = "none";
-    }, 100);
+    }, 1000);
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
