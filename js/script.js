@@ -45,3 +45,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var items = document.querySelectorAll('.reviews__page__body-item-text');
+
+    items.forEach(function(item) {
+        // Визначаємо висоту контейнера
+        var containerHeight = parseInt(window.getComputedStyle(item).maxHeight);
+
+        // Визначаємо висоту текстового контенту
+        var contentHeight = item.scrollHeight;
+
+        // Перевіряємо, чи текст перевищує висоту контейнера
+        if (contentHeight > containerHeight) {
+            // Додаємо стилі для обрізання тексту і додаємо ellipsis
+            item.style.overflow = 'hidden';
+            item.style.textOverflow = 'ellipsis';
+
+            // Додаємо обробник кліку
+            item.addEventListener('click', function() {
+                // При кліку змінюємо стилі для відображення повного тексту
+                item.style.overflow = 'visible';
+                item.style.textOverflow = 'unset';
+            });
+        }
+    });
+});
