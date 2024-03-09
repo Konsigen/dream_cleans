@@ -239,7 +239,7 @@
                                 </select>
                                 <label for="select-service">Додатково</label>
                                 <select id="select-service" name="service">
-                                    <option selected>-----</option>
+                                    <option selected value="none">-----</option>
                                     <option value="window" id="window_option">Миття вікон</option>
                                     <option value="furniture">Хімчистка м’яких меблів</option>
                                 </select>
@@ -251,17 +251,14 @@
                                           <div class="calc__page__range-filled-line" id="range-line"></div>
                                        </div>
                                        <div class="calc__page__range-thumb" id="range-thumb">
-                                          <div class="calc__page__range-value">
-                                             <span class="calc__page__range-value-number" id="range-number">1</span>
-                                          </div>
+                                          <div class="calc__page__range-value" id="range-number"></div>
                                        </div>
-                                       <input type="range" class="calc__page__range-input" id="range-input" min="1" max="100" value="1" step="1">
+                                       <input type="range" class="calc__page__range-input" name="area" id="range-input" min="1" max="100" value="1" step="1">
                                     </div>
                                 </div>
                                 
                                 <label for="phone"></label>
-                                <!-- TODO required -->
-                                <input id="phone" name="phone" placeholder="Ваш номер*"> 
+                                <input type="tel" id="phone" name="phone" placeholder="*Ваш номер" required> 
                                 <button for="calc__page" id="form_button" class="calc__page__submit-btn">Розрахувати вартість</button>
                             </form>
                         </div>
@@ -796,8 +793,8 @@
                 <div class="popup__form-content-title">ЗАМОВИТИ ПРИБИРАННЯ</div>
                 <div class="popup__form-content-subtitle">Ми перетелефонуємо Вам протягом 10 хвилин для уточнення деталей</div>
                 <form class="popup__form-content-form" id="popup-content-form">
-                    <input type="text" placeholder="Ваше ім'я" name="name">
-                    <input type="tel" placeholder="Ваш телефон" name="phone">
+                    <input type="text" placeholder="*Ваше ім'я" name="name" required>
+                    <input type="tel" placeholder="*Ваш телефон" name="phone" required>
                     <input type="submit" value="ЗАМОВИТИ ПОСЛУГУ">
                 </form>
             </div>

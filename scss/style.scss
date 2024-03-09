@@ -84,7 +84,7 @@ body {
     background-color: #55b3db;
     padding: 38px 40px 40px 40px;
     border-radius: 30px;
-    
+
     &-close {
         position: absolute;
         top: 20px;
@@ -92,7 +92,7 @@ body {
 
         width: 20px;
         height: 20px;
-        
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -705,19 +705,17 @@ body {
 
         &-thumb {
             position: absolute;
-           
+
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            width: 40px;
-            height: 40px;
+
+            width: 50px;
+            height: 50px;
             padding: 20px;
-           
+
             border-radius: 100%;
             background-color: #55b3db;
-            z-index: 100;
-            
         }
 
         &-value {
@@ -1017,7 +1015,7 @@ body {
     margin-top: 100px;
 
     &.container {
-        max-width: 75%;
+        max-width: 1450px;
     }
     &-title {
         font-family: "Ruberoid";
@@ -1280,58 +1278,6 @@ body {
         opacity: 1;
     }
 }
-
-// @keyframes rotate {
-//     0% {
-//         transform: translateY(-500%);
-//     }
-//     5% {
-//         transform: translateY(0%);
-//     }
-//     10% {
-//         transform: translateY(-200%);
-//     }
-//     15% {
-//         transform: translateY(0%);
-//     }
-//     20% {
-//         transform: translateY(-120%);
-//     }
-//     25% {
-//         transform: translateY(0%);
-//     }
-//     30% {
-//         transform: translateY(-80%);
-//     }
-//     35% {
-//         transform: translateY(0%);
-//     }
-//     40% {
-//         transform: translateY(-50%);
-//     }
-//     45% {
-//         transform: translateY(0%);
-//     }
-//     50% {
-//         transform: translateY(-30%);
-//     }
-//     55% {
-//         transform: translateY(0%);
-//     }
-//     75% {
-//         transform: scale(10);
-//         background-color: #fff;
-
-//     }
-
-//     95% {
-//         background-color: #1a79a3;
-//     }
-//     100% {
-//         transform: scale(70);
-//     }
-// }
-
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
