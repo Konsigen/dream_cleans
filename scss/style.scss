@@ -1146,6 +1146,7 @@ body {
                 color: #fff;
             }
         }
+        
         &__right-btn {
             a {
                 background-color: transparent;
@@ -1154,7 +1155,7 @@ body {
                 border-radius: 8px;
                 color: #fff;
                 transition: all 0.3s;
-
+                
                 &:hover {
                     background-color: #fff;
                     color: #000;
