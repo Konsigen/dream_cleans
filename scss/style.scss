@@ -1146,20 +1146,18 @@ body {
                 color: #fff;
             }
         }
-        &__right {
-            &-btn {
-                button {
-                    background-color: transparent;
-                    border: 1px solid #fff;
-                    padding: 10px 15px;
-                    border-radius: 8px;
-                    color: #fff;
-                    transition: all 0.3s;
+        &__right-btn {
+            a {
+                background-color: transparent;
+                border: 1px solid #fff;
+                padding: 10px 15px;
+                border-radius: 8px;
+                color: #fff;
+                transition: all 0.3s;
 
-                    &:hover {
-                        background-color: #fff;
-                        color: #000;
-                    }
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
                 }
             }
         }

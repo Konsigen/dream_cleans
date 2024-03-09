@@ -490,7 +490,7 @@
         &__header{
             padding: 15px 20px;
             &__right-btn{
-                button{
+                a{
                     font-size: 14px;
                     padding: 5px 15px;
                 }   
@@ -1028,7 +1028,7 @@
             &__right-btn{
                 margin-top: 20px;
                 width: 100%;
-                button{
+                a{
                     width: 100%;
                     font-size: 14px;
                 }
