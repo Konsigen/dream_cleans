@@ -1,11 +1,13 @@
-const rangeThumb = document.getElementById('range-thumb'),
-      rangeNumber = document.getElementById('range-number'),
-      rangeLine = document.getElementById('range-line'),
-      rangeInput = document.getElementById('range-input')
-
- 
-
+const rangeThumb = document.getElementById('range-thumb');
+const rangeNumber = document.getElementById('range-number');
+const rangeLine = document.getElementById('range-line');
+const rangeInput = document.getElementById('range-input');
+const menu = document.querySelector('.header__menu');
+const menuItem = document.querySelectorAll('.header__link');
+const hamburger = document.querySelector('.hamburger');
+const preloader = document.querySelector(".preloader");
 const step = 100 / rangeInput.max 
+
 
 const rangeInputSlider = () =>{
    rangeNumber.textContent = rangeInput.value;
@@ -18,34 +20,28 @@ const rangeInputSlider = () =>{
    rangeThumb.style.left = (thumbPosition * space) + 'px'
    rangeLine.style.width = rangeInput.value * step + '%'
 
-   
-
-   rangeInput.addEventListener('input', rangeInputSlider)
 }
 
 rangeInputSlider()
+rangeInput.addEventListener('input', rangeInputSlider)
 
 document.addEventListener('DOMContentLoaded', () => {
-  const menu = document.querySelector('.header__menu'),
-        menuItem = document.querySelectorAll('.header__link'),
-        hamburger = document.querySelector('.hamburger');
+    
 
-  hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('hamburger_active');
-      menu.classList.toggle('menu_active');
-  });
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu_active');
+    });
 
-  menuItem.forEach(item => {
-      item.addEventListener('click', () => {
-          hamburger.classList.remove('hamburger_active');
-          menu.classList.remove('menu_active'); 
-      });
-  });
-});
-window.onload = function(){
-    const preloader = document.querySelector(".preloader");
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.remove('hamburger_active');
+            menu.classList.remove('menu_active'); 
+        });
+    });
 
     setTimeout(function(){
         preloader.style.display = "none";
-    }, 2000);
-}
+    }, 100);
+});
+
