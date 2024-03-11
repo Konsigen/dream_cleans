@@ -20,6 +20,7 @@
         }
         &-location{
             padding: 10px 15px;
+            justify-content: center;
             span{
                 font-size: 26px;
             }
@@ -63,11 +64,7 @@
             }
         }
     }
-    .advantages__page{
-        &__items{
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        }
-    }
+    
     .price__page{
         &-item{
             margin: 0 auto;
@@ -108,15 +105,7 @@
         }
         
     }
-    .advantages__page{
-        &__items{
-            
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        }
-        &__item{
-            margin: 0 auto;
-        }
-    }
+    
     .title__page{
         &-first{
             width: 55%;
@@ -245,7 +234,6 @@
         }
         &-img{
             img{
-                width: 360px;
                 height: 420px;
             }
         }
@@ -294,17 +282,7 @@
         &-header{
             font-size: 24px;
         }
-        &-location{
-            column-gap: 10px;
-            margin-top: 10px;
-            img{
-                width: 30px;
-                height: 30px;
-            }
-            span{
-                font-size: 14px;
-            }
-        }
+        
         &-phone{
             span{
                 font-size: 14px;
@@ -313,9 +291,7 @@
         &-social-item{
             min-width: 43px;
             height: 45px;
-            &:last-child{
-                display: none;
-            }
+            
         }
         &-links{
             gap: 35px;
@@ -431,6 +407,7 @@
         padding: 30px 10px;
         &__content{
             justify-content: center;
+            
         }
         &__wrapper{
             gap: 35px;
@@ -439,6 +416,7 @@
             display: none;
         }
         &__right {
+            gap: 35px;
         }
         &-title{
             font-size: 24px;
@@ -454,31 +432,11 @@
     }
 }
 @media (max-width: 768px)  {
-    .header__menu {
-        position: fixed;
-        display: flex; 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        padding: 20px 15px;
-        background-color: #ECECEC;
-        transition: 0.6s all;
-        z-index: 5;
-    }
     .header__first, .title__page-header, .title__page-location {
         animation: none;
     }
     .header__menu.menu_active { 
         right: 0;
-    }
-    
-    .header__menu_item { 
-        padding-right: 0;
-        border: none;
-        margin: 10px 0;
     }
     
     .reviews__page{
@@ -517,19 +475,20 @@
     .hamburger {
         display: block;
         position: fixed;
-        right: 30px;
-        top: 30px;
+        right: 40px;
+        top: 40px;
         transform: translateY(-50%);
-        width: 26px;
+        width: 25px;
         height: 12px;
         margin-left: 5px;
         z-index: 7;
+        cursor: pointer;
         span {
             display: block;
             height: 2px;
             width: 100%;
             background-color: black;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             transition: 0.5s all;
             z-index: 7;
         }
@@ -582,8 +541,10 @@
             align-items: center;
         }
         &-location{
+            padding: 10px 0;
+            width: 100%;
             span{
-                font-size: 21px;
+                font-size: 20px;
             }
         }
         &-header{
@@ -679,24 +640,9 @@
         }
 
     }
-    .advantages__page{
-        &__items{
-            grid-template-columns: repeat(auto-fit,100%);
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-        }
-        &__item{
-            width: 100%;
-        }
-        &__title{
-            font-size: 30px;
-            span{
-                font-size: 55px;
-            }
-        }
-    }
+    
     .price__page{
+        margin-top: 0;
         margin-bottom: 50px;
         &-header{
             display: block;
@@ -810,7 +756,6 @@
         &-img{
             img{
                 height: 250px;
-                width: 214px;
             }
         }
         &-item{
@@ -854,10 +799,6 @@
     }
 }
 @media (max-width: 480px)  {
-    .hamburger{
-        right: 10px;
-    }
-    
     .header{
         &__phone{
             font-size: 15px;
@@ -893,8 +834,8 @@
         }
         &-banner{
             >img{
-                width: 270px;
-                height: 220px;
+                width: 90%;
+                height: auto;
             }
         }
         &-social-sm{
@@ -969,18 +910,7 @@
                 font-size: 34px;
             }
         }
-        &__items{
-            justify-content: center;
-            grid-row-gap: 1em;
-        }
-        &__item{
-            &-title{
-                font-size: 16px;
-            }
-            &-subtitle{
-                font-size: 12px;
-            }
-        }
+        
     }
     .reviews__page{
         &.container{
@@ -1151,18 +1081,17 @@
         }
     }
     .footer{
+        &__right {
+            gap: 5px;
+        }
         &-img{
             img{
-                width: 145px;
-                height: 170px;
+                height: 260px;
             }
         }
         &__content{
             justify-content: center;
         }
-    }
-    .anchor{
-        display: none;
     }
     .thanks__popup {
         &-container {
@@ -1187,6 +1116,15 @@
             }
             span {
                 font-size: 16px;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .footer{
+        &-img{
+            img{
+                height: 220px;
             }
         }
     }

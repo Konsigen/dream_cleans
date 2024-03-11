@@ -3,7 +3,7 @@ const rangeNumber = document.getElementById('range-number');
 const rangeLine = document.getElementById('range-line');
 const rangeInput = document.getElementById('range-input');
 const menu = document.querySelector('.header__menu');
-const menuItem = document.querySelectorAll('.header__link');
+const menuItem = document.querySelectorAll('.header__menu__link');
 const hamburger = document.querySelector('.hamburger');
 const preloader = document.querySelector(".preloader");
 
