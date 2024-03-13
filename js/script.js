@@ -2,7 +2,7 @@ const rangeThumb = document.getElementById('range-thumb');
 const rangeNumber = document.getElementById('range-number');
 const rangeLine = document.getElementById('range-line');
 const rangeInput = document.getElementById('range-input');
-const menu = document.querySelector('.header__menu');
+const menu = document.querySelector('.header__mobile__menu');
 const menuItem = document.querySelectorAll('.header__menu__link');
 const hamburger = document.querySelector('.hamburger');
 const preloader = document.querySelector(".preloader");
@@ -32,13 +32,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
-        menu.classList.toggle('menu_active');
+        menu.classList.toggle('header__mobile__menu_active');
     });
 
     menuItem.forEach(item => {
         item.addEventListener('click', () => {
             hamburger.classList.remove('hamburger_active');
-            menu.classList.remove('menu_active'); 
+            menu.classList.remove('header__mobile__menu_active'); 
         });
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const anchor = document.querySelector('.anchor');
+    const footer = document.querySelector('.footer');
+    window.addEventListener('scroll', function() {
+        const footerOffset = footer.getBoundingClientRect();
+        const anchorOffset = anchor.getBoundingClientRect();
+        
+
+        if (anchorOffset.bottom >= footerOffset.top) {
+        anchor.style.visibility = 'hidden';
+        } else {
+        anchor.style.visibility = 'visible';
+        }
     });
 });

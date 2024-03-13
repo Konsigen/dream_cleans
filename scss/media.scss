@@ -89,10 +89,12 @@
             font-size: 24px;
         }
         &__menu {
-            gap: 20px;
-        }
-        &__link {
-            font-size: 16px;
+            &__links{
+                gap: 20px;
+            }
+            &__link {
+                font-size: 16px;
+            }
         }
     }
 
@@ -501,7 +503,7 @@
     .hamburger {
         display: block;
         position: fixed;
-        right: 40px;
+        right: 15px;
         top: 40px;
         transform: translateY(-50%);
         width: 25px;
@@ -542,6 +544,22 @@
         display: block;
     }
     .header {
+        &__mobile{
+            &__links{
+                display: flex;
+                gap: 15px;
+            }
+        }
+        &__menu{
+            &__links{
+                display: none;
+            }
+            &__phone{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
         &__phone {
             display: block;
             font-size: 18px;
@@ -608,9 +626,6 @@
         }
         &-info-item {
             font-size: 18px;
-        }
-        &-social-item {
-            
         }
         &-social {
             display: none;
@@ -1137,6 +1152,7 @@
             gap: 5px;
         }
         &-img {
+            display: none;
             img {
                 height: 260px;
             }
@@ -1171,9 +1187,7 @@
             }
         }
     }
-    .anchor {
-        display: none;
-    }
+
 }
 @media (max-width: 400px) {
     .footer {
