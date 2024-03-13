@@ -252,7 +252,9 @@
     }
 }
 @media (max-width: 1024px) {
-    
+    .container{
+        max-width: 95%;
+    }
     .header{
         padding: 20px 0;
         &__name{
@@ -294,6 +296,9 @@
         &-social-item{
             min-width: 43px;
             height: 45px;
+            &:last-child{
+                display: none;
+            }
             
         }
         &-links{
@@ -438,6 +443,9 @@
     }
 }
 @media (max-width: 768px)  {
+    .container{
+        max-width: 90%;
+    }
     .header__first, .title__page-header, .title__page-location {
         animation: none;
     }
