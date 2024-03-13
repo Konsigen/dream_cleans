@@ -232,7 +232,7 @@ body {
     position: fixed;
     bottom: 40px;
     right: 30px;
-    z-index: 30;
+    z-index: 1;
     cursor: pointer;
     animation: rotate 40s linear infinite;
     transition: all 0.3s;
@@ -339,6 +339,7 @@ body {
     &__mobile{
         &__menu{
             display: none;
+            z-index: 1000;
             &_active{
                 display: flex;
                 flex-direction: column;

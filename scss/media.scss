@@ -981,9 +981,9 @@
         }
     }
     .reviews__page {
-        &.container {
-            max-width: 95%;
-        }
+        // &.container {
+        //     max-width: 95%;
+        // }
         &-title {
             font-size: 24px;
             margin-bottom: 30px;
@@ -1152,7 +1152,7 @@
             gap: 5px;
         }
         &-img {
-            display: none;
+            // display: none;
             img {
                 height: 260px;
             }
