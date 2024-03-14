@@ -67,6 +67,12 @@
             }
         }
     }
+    .advantages__page{
+        &__items{
+            justify-content: center;
+            grid-template-columns: repeat(5,300px);
+        }
+    }
 
     .price__page {
         &-item {
@@ -80,6 +86,18 @@
         &.container {
             max-width: 75%;
         }
+    }
+}
+@media(max-width:1600px){
+    .advantages__page{
+        &__items{
+            grid-template-columns: repeat(5,240px);
+        }
+    }
+}
+@media(max-width:1440px){
+    .advantages__page__items {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 @media (max-width: 1280px) {
