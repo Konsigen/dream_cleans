@@ -336,11 +336,11 @@ body {
         line-height: 100%;
     }
 
-    &__mobile{
-        &__menu{
+    &__mobile {
+        &__menu {
             display: none;
             z-index: 1000;
-            &_active{
+            &_active {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -355,12 +355,11 @@ body {
                 z-index: 5;
             }
         }
-        &__links{
+        &__links {
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
-        
     }
     &__menu {
         &__links {
@@ -580,19 +579,19 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-    
+
                 background-color: #1a79a3;
                 border-radius: 100%;
-    
+
                 width: 100%;
                 height: 100%;
-    
+
                 transition: all 0.3s;
                 img {
                     width: 30px;
                     height: 30px;
                 }
-    
+
                 &:hover {
                     background-color: #6bb9db;
                 }
@@ -1328,12 +1327,40 @@ body {
     &__wrapper {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        // align-items: center;
         gap: 50px;
     }
     &__right {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        row-gap: 40px;
+
+        &-first {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;  
+        }
+
+        &-second {
+            display: flex;
+            gap: 20px;
+            a {
+                padding: 15px 40px;
+                border-radius: 100px;
+                border: 1px solid #fff;
+
+                color: #fff;
+                font-weight: 500;
+
+                transition: all .3s;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
     }
     &-item {
         a {
@@ -1364,17 +1391,11 @@ body {
             }
         }
     }
-    &-header {
-        font-size: 42px;
-        color: white;
-        font-weight: 500;
-        margin-bottom: 30px;
-        line-height: 100%;
-    }
     &-title {
         font-size: 30px;
         font-weight: 700;
         color: white;
+        line-height: 100%;
     }
     &-img {
         img {
@@ -1382,6 +1403,15 @@ body {
         }
     }
     &-map {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        &-header {
+            font-size: 42px;
+            color: white;
+            font-weight: 500;
+            line-height: 100%;
+        }
         img {
             width: 450px;
             height: 450px;
@@ -1418,6 +1448,7 @@ body {
             font-size: 22px;
         }
     }
+    
 }
 
 @keyframes anim1 {
