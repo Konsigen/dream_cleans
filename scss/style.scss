@@ -210,6 +210,10 @@ body {
         width: 110px;
         height: 110px;
 
+        img {
+            width: 50px;
+        }
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -322,12 +326,11 @@ body {
     &__first {
         display: flex;
         align-items: center;
-        column-gap: 5px;
+        column-gap: 10px;
     }
     &__logo {
         img {
-            width: 60px;
-            height: 60px;
+            width: 50px;
         }
     }
     &__name {
@@ -411,6 +414,8 @@ body {
 
         &__logo {
             display: flex;
+            flex-direction: column;            
+            justify-content: center;
             align-items: center;
             gap: 5px;
             margin-top: 30px;
@@ -636,7 +641,7 @@ body {
         background-color: white;
         flex-direction: column;
         gap: 10px;
-        border-radius: 10px;
+        border-radius: 30px;
         padding: 20px 30px;
     }
     &-info-item {
@@ -1017,7 +1022,7 @@ body {
     &-subheader {
         display: flex;
         align-items: center;
-        gap: 10%;
+        gap: 5%;
         &-wrapper {
             width: 65%;
             display: flex;
@@ -1032,20 +1037,22 @@ body {
     &-items {
         margin-top: 35px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
-        row-gap: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        gap: 40px;
     }
     &-item {
-        width: 550px;
         height: 250px;
-        border-radius: 20px;
         padding: 25px;
-        padding-bottom: 50px;
+
+        border-radius: 20px;
+
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 30px;
+
         box-shadow: inset 300px 0px 90px 0px #000000b8;
+
         &:nth-child(1) {
             background: url(../img/base/services_1.jpg) center center / cover no-repeat;
         }
@@ -1094,6 +1101,11 @@ body {
             &:hover {
                 background-color: transparent;
             }
+        }
+    }
+    &-img {
+        img {
+            width: 300px;
         }
     }
 }
@@ -1339,13 +1351,13 @@ body {
         &-first {
             display: flex;
             align-items: center;
-            column-gap: 20px;  
+            column-gap: 20px;
         }
 
         &-second {
             display: flex;
             gap: 20px;
-            a {
+            >a {
                 padding: 15px 40px;
                 border-radius: 100px;
                 border: 1px solid #fff;
@@ -1353,7 +1365,7 @@ body {
                 color: #fff;
                 font-weight: 500;
 
-                transition: all .3s;
+                transition: all 0.3s;
 
                 &:hover {
                     background-color: #fff;
@@ -1447,8 +1459,13 @@ body {
             font-weight: 700;
             font-size: 22px;
         }
+      
     }
-    
+    &-location {
+        &-mobile {
+            display: none;
+        }
+    }
 }
 
 @keyframes anim1 {

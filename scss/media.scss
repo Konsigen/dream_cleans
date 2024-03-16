@@ -5,8 +5,7 @@
         }
         &__logo {
             img {
-                width: 50px;
-                height: 50px;
+                width: 40px;
             }
         }
         &__link {
@@ -67,18 +66,13 @@
             }
         }
     }
-    .advantages__page{
-        &__items{
+    .advantages__page {
+        &__items {
             justify-content: center;
-            grid-template-columns: repeat(5,300px);
+            grid-template-columns: repeat(5, 300px);
         }
     }
 
-    .price__page {
-        &-item {
-            margin: 0 auto;
-        }
-    }
     .container {
         max-width: 90%;
     }
@@ -88,21 +82,21 @@
         }
     }
 }
-@media(max-width:1600px){
-    .advantages__page{
-        &__items{
+@media (max-width: 1600px) {
+    .advantages__page {
+        &__items {
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         }
     }
 }
-@media(max-width:1440px){
+@media (max-width: 1440px) {
     .advantages__page__items {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
     .footer {
         &__right {
             &-second {
-                a {
+                >a {
                     font-size: 14px;
                     padding: 15px 20px;
                 }
@@ -117,7 +111,7 @@
             font-size: 24px;
         }
         &__menu {
-            &__links{
+            &__links {
                 gap: 20px;
             }
             &__link {
@@ -203,15 +197,14 @@
             }
         }
         &-img {
-            img {
-                width: 140px;
-                height: 200px;
-            }
         }
         &-items {
             margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(calc(50% - 40px), 1fr));
+            gap: 20px;
         }
         &-item {
+            width: 100%;
             &-btn {
                 padding: 10px 40px;
             }
@@ -235,7 +228,6 @@
         }
     }
     .footer {
-        
         &-title {
             font-size: 22px;
         }
@@ -330,26 +322,24 @@
         }
         &-social {
             gap: 10px;
-            
+
             &-item {
                 width: 35px;
                 height: 35px;
                 a {
                     width: 35px;
                     height: 35px;
-    
+
                     img {
                         width: 25px;
                         height: 25px;
                     }
                 }
-                
-    
+
                 &-phone {
                     display: none;
                 }
             }
-            
         }
         &-links {
             gap: 35px;
@@ -462,7 +452,12 @@
             }
         }
     }
-
+    .price__page {
+        &-items {
+        }
+        &-item {
+        }
+    }
     .footer {
         padding: 30px 10px;
         &__content {
@@ -486,8 +481,7 @@
             font-size: 20px;
         }
         &-location {
-            max-width: 300px;
-         }
+        }
     }
     .anchor {
         width: 100px;
@@ -507,7 +501,7 @@
     .header__menu.menu_active {
         right: 0;
     }
-    
+
     .reviews__page {
         margin-top: 30px;
         &-title {
@@ -585,18 +579,18 @@
         display: block;
     }
     .header {
-        &__mobile{
-            &__links{
+        &__mobile {
+            &__links {
                 display: flex;
                 gap: 15px;
             }
         }
-        &__menu{
-            &__links{
+        &__menu {
+            &__links {
                 display: none;
             }
-            &__phone{
-                a{
+            &__phone {
+                a {
                     font-size: 18px;
                 }
             }
@@ -629,7 +623,7 @@
             padding: 10px 0;
             width: 100%;
             span {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
         &-header {
@@ -673,7 +667,7 @@
         }
         &-social {
             gap: 20px;
-            
+
             &-item {
                 margin-top: 20px;
                 width: 50px;
@@ -681,19 +675,17 @@
                 a {
                     width: 50px;
                     height: 50px;
-    
+
                     img {
                         width: 30px;
                         height: 30px;
                     }
                 }
-                
-    
+
                 &-phone {
                     display: none;
                 }
             }
-            
         }
         &-social-sm {
             margin-top: 20px;
@@ -856,6 +848,13 @@
     .footer {
         padding: 20px 10px;
 
+        &-location {
+            display: none;
+            &-mobile {
+                display: flex;
+            }
+        }
+
         &-title {
             font-size: 18px;
         }
@@ -879,15 +878,14 @@
         &__right {
             &-second {
                 flex-direction: column;
-                width: 100%;
-                a {
+                width: 95%;
+                >a {
                     padding: 0;
                     height: 50px;
 
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
                 }
             }
         }
@@ -959,7 +957,7 @@
                 height: auto;
             }
         }
-        
+
         &-location {
             column-gap: 5px;
             span {
@@ -973,30 +971,27 @@
                 padding: 12px 20px;
             }
         }
-        
-        
+
         &-social {
             gap: 10px;
-            
+
             &-item {
                 width: 40px;
                 height: 40px;
                 a {
                     width: 40px;
                     height: 40px;
-    
+
                     img {
                         width: 25px;
                         height: 25px;
                     }
                 }
-                
-    
+
                 &-phone {
                     display: none;
                 }
             }
-            
         }
         &-info-item {
             font-size: 14px;
@@ -1203,7 +1198,7 @@
             }
         }
     }
-    
+
     .thanks__popup {
         &-container {
             width: 95%;
@@ -1230,7 +1225,6 @@
             }
         }
     }
-
 }
 @media (max-width: 420px) {
     .footer {
@@ -1242,7 +1236,9 @@
                 text-align: center;
             }
         }
-        &-connectus-items, &-followus-items, &-phone {
+        &-connectus-items,
+        &-followus-items,
+        &-phone {
             justify-content: center;
         }
         &-location {

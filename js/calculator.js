@@ -37,13 +37,19 @@ calculatorForm.addEventListener('submit', (e) => {
     const isMoreThan100 = cleanAreaValue === 100 ? 1 : 0;
     const priceByMeter = prices[cleanKind.value][isMoreThan100][isWindowsCleaning];
 
-    generalPrice += cleanExtra.value === 'furniture' ? dryCleaningPrice : 0;
     generalPrice += priceByMeter * cleanAreaValue;
+    
+    if (cleanExtra.value === 'furniture') {
+        generalPrice += dryCleaningPrice;
+        popupPricePerMeterField.textContent = priceByMeter + ` грн / м² (+${dryCleaningPrice}грн хімчистка)`;
+    } else {
+        popupPricePerMeterField.textContent = priceByMeter + ' грн / м²';
+    }
+
+    popupPriceField.textContent = generalPrice + ' грн';
 
     popup.style.display = 'block';
     document.body.style.overflow = 'hidden';
-    popupPriceField.textContent = generalPrice + ' грн';
-    popupPricePerMeterField.textContent = priceByMeter + ' грн / м²';
 });
 
 cleanKind.addEventListener('change', (e) => {
