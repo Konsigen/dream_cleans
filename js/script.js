@@ -28,6 +28,7 @@ rangeInput.addEventListener('input', rangeInputSlider);
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(function(){
         preloader.style.display = "none";
+        document.body.style.overflow = 'visible'
     }, 2000);
 
     hamburger.addEventListener('click', () => {
