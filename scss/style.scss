@@ -414,7 +414,7 @@ body {
 
         &__logo {
             display: flex;
-            flex-direction: column;            
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 5px;
@@ -1357,7 +1357,7 @@ body {
         &-second {
             display: flex;
             gap: 20px;
-            >a {
+            > a {
                 padding: 15px 40px;
                 border-radius: 100px;
                 border: 1px solid #fff;
@@ -1459,7 +1459,6 @@ body {
             font-weight: 700;
             font-size: 22px;
         }
-      
     }
     &-location {
         &-mobile {
