@@ -631,6 +631,7 @@
             text-align: center;
             span {
                 font-size: 40px;
+                font-weight: 500;
             }
         }
         &-interactive {
@@ -852,6 +853,8 @@
             display: none;
             &-mobile {
                 display: flex;
+                justify-content: center;
+                gap: 0 !important;
             }
         }
 
@@ -963,7 +966,7 @@
             border-width: 1px;
             span {
                 font-size: 18px;
-                font-weight: 700;
+                font-weight: 500;
             }
             img {
                 width: 20px;
